@@ -115,10 +115,11 @@ h6 {
 
 .header__logo {
   margin-right: auto;
+  margin-left: 1px;
   color: #ffffff;
   font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.8px;
 }
 
 .header__note {
@@ -163,7 +164,7 @@ h6 {
   transition: all 0.3s linear;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: -0.19px;
+  letter-spacing: -0.17px;
 }
 
 .nav__link:hover,
@@ -209,8 +210,8 @@ h6 {
 .slide {
   display: flex;
   align-items: center;
-  max-width: 795px;
   margin: 0 auto;
+  max-width: 795px;
 }
 
 .vertical-phone {
@@ -236,4 +237,84 @@ h6 {
 
 .horizontal-shadow {
   margin-left: 1px;
+}
+
+.services {
+  border-bottom: 6px solid #ffffff;
+}
+
+.services__block {
+  padding-top: 56px;
+  padding-bottom: 29px;
+  margin-left: 1px;
+}
+
+.services__title {
+  max-width: 940px;
+  margin-left: -1px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  font-family: "Lato Black";
+  color: #666d89;
+  letter-spacing: 0.02px;
+  word-spacing: 0.16px;
+}
+
+.services__desc {
+  max-width: 939px;
+  overflow: hidden;
+  margin-bottom: 46px;
+  font-family: "Lato Light";
+  font-size: 18px;
+  font-weight: 100;
+  text-align: justify;
+  text-align-last: left;
+  letter-spacing: -0.22px;
+  line-height: 1.7;
+}
+
+.layout-column3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service {
+  display: flex;
+  flex: 0 0 300px;
+  margin-bottom: 31px;
+}
+
+.servise__pic {
+  max-width: 55px;
+  max-height: 55px;
+}
+
+.service__img {
+  margin-left: -1px;
+}
+
+.service__info {
+  margin-left: 18px;
+}
+
+.service__head {
+  font-family: "Lato Black";
+  font-size: 1.8rem;
+  margin-top: -1px;
+  margin-bottom: 8px;
+  margin-left: 0.4px;
+  line-height: 1;
+}
+
+.service__text {
+  max-width: 221px;
+  margin-top: 9px;
+  font-family: "Lato Regular";
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.9;
+  letter-spacing: -0.1px;
 }
