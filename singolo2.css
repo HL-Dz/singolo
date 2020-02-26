@@ -101,7 +101,7 @@ h6 {
   margin: 0 auto;
 }
 
-.portfolio{
+.portfolio {
   padding-top: 57px;
   padding-bottom: 47px;
   background: #2d303a;
@@ -130,8 +130,12 @@ h6 {
   display: flex;
 }
 
-.buttons__item{
+.buttons__item {
   margin-right: 10px;
+}
+
+.buttons__item:first-child a {
+  letter-spacing: 0.1px;
 }
 
 .buttons__item--active a{
@@ -139,7 +143,7 @@ h6 {
   border-color: #c5c5c5;
 }
 
-.buttons__link{
+.buttons__link {
   display: inline-block;
   padding: 1px 7px;
   font-size: 1.2rem;
@@ -169,6 +173,127 @@ h6 {
   margin-bottom: 20px;
 }
 
-.portfolio__pic:nth-child(n+13){
+.portfolio__pic:nth-child(n+13) {
   display: none;
+}
+
+.about {
+  padding-top: 56px;
+  padding-bottom: 67px;
+  border-bottom: 6px solid #ffffff;
+}
+
+.about__title {
+  margin-bottom: 17px;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Lato Black";
+  color: #666d89;
+  letter-spacing: -0.05px;
+}
+
+.about__desc {
+  margin-bottom: 45px;
+  text-align: justify;
+  font-size: 1.8rem;
+  font-family: "Lato Light";
+  line-height: 1.62;
+  letter-spacing: -0.2px;
+}
+
+.about__column3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.person {
+  flex: 0 0 300px;
+}
+
+.person:nth-child(1) {
+  margin-right: 19px;
+}
+
+.person:nth-child(1) .person__info {
+  letter-spacing: -0.199px;
+}
+
+.person:nth-child(2) {
+  margin-right: 21px;
+}
+
+.person:nth-child(2) .person__info {
+  letter-spacing: -0.01px;
+}
+
+.person:nth-child(2) .person__name {
+  letter-spacing: -0.16px;
+}
+
+.person:nth-child(3) .social__item {
+  margin-left: 0px;
+}
+
+.person__pic {
+  margin-bottom: 8px;
+}
+
+.person__name {
+  max-width: 300px;
+  max-height: 25px;
+  overflow: hidden;
+  font-size: 1.8rem;
+  font-family: "Lato Black";
+  color: #666d89;
+  margin-bottom: 7px;
+  line-height: 1.5;
+}
+
+.person__info {
+  margin-bottom: 24px;
+  font-size: 1.2rem;
+  font-family: "Lato Regular";
+  line-height: 1.8;
+  text-align: justify;
+  letter-spacing: -0.1px;
+}
+
+.social {
+  display: flex;
+}
+
+.social__item {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.social__item:first-child{
+  margin-left: 1px;
+}
+
+.social__link {
+  max-height: 32px;
+  display: inline-block;
+  transition: all 0.2s ease-in;
+}
+
+.social__link:hover {
+  border-radius: 10px;
+}
+
+.social__link--fb:hover {
+  box-shadow: 0px 0px 25px rgb(13, 44, 145);
+}
+
+.social__link--go:hover {
+  box-shadow: 0px 0px 25px rgb(218, 26, 26);
+}
+
+.social__link--tw:hover {
+  box-shadow: 0px 0px 25px rgb(36, 127, 247);
+}
+
+.social__link--ln:hover {
+  box-shadow: 0px 0px 25px rgb(7, 53, 114);
 }
