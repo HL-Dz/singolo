@@ -218,7 +218,7 @@ h6 {
 }
 
 .info__list {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .info__item {
@@ -261,4 +261,64 @@ h6 {
 .info__text {
   letter-spacing: -0.2px;
   transition: all 0.5s ease-in-out;
+}
+
+.footer {
+  background: #2d303a;
+  padding: 22px 0 22px;
+  font-size: 1.2rem;
+  font-family: "Lato Regular";
+}
+
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  letter-spacing: -0.05px;
+}
+
+.social {
+  display: flex;
+}
+
+.social-footer .social__item:last-child{
+ margin-right: 0;
+}
+
+.social__item {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.social__item:first-child{
+  margin-left: 1px;
+}
+
+.social__link {
+  max-height: 32px;
+  display: inline-block;
+  transition: all 0.2s ease-in;
+}
+
+.social__link:hover {
+  border-radius: 10px;
+}
+
+.social__link--fb:hover {
+  box-shadow: 0px 0px 25px rgb(13, 44, 145);
+}
+
+.social__link--go:hover {
+  box-shadow: 0px 0px 25px rgb(218, 26, 26);
+}
+
+.social__link--tw:hover {
+  box-shadow: 0px 0px 25px rgb(36, 127, 247);
+}
+
+.social__link--ln:hover {
+  box-shadow: 0px 0px 25px rgb(7, 53, 114);
 }
