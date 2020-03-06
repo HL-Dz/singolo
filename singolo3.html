@@ -29,6 +29,7 @@
                       name="name"
                       placeholder="Name (Required)"
                       required
+                      pattern="[_a-zA-Z0-9()\s-]+"
                     />
                   </div>
                   <div class="form__row">
@@ -39,6 +40,7 @@
                       name="email"
                       placeholder="Email (Required)"
                       required
+                      pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
                     />
                   </div>
                   <div class="form__row">
@@ -48,6 +50,8 @@
                       type="text"
                       name="subject"
                       placeholder="Subject"
+                      required
+                      pattern="[_a-zA-Z0-9()\s-]+"
                     />
                   </div>
                   <div class="form__row">
@@ -56,6 +60,7 @@
                       id="form-detail"
                       name="detail"
                       placeholder="Describe your project in detail..."
+                      required
                     ></textarea>
                   </div>
                   <div class="form__row form__row--btn">
