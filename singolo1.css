@@ -310,6 +310,7 @@ h6 {
 
 .service__text {
   max-width: 221px;
+  overflow: hidden;
   margin-top: 9px;
   font-family: "Lato Regular";
   font-size: 1.2rem;
