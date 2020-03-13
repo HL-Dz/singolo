@@ -150,10 +150,6 @@ h6 {
   background: #494e62;
 }
 
-/* .nav__item.active .nav__link {
-  color: #f06c64;
-} */
-
 .nav__item:last-child {
   margin-right: 0;
 }
@@ -364,11 +360,6 @@ h6 {
   letter-spacing: 0.1px;
 }
 
-.buttons__item--active a{
-  color: #dedede;
-  border-color: #c5c5c5;
-}
-
 .buttons__link {
   display: inline-block;
   padding: 1px 7px;
@@ -379,6 +370,11 @@ h6 {
   transition: all .2s ease-in-out;
   line-height: 1.5;
   letter-spacing: -0.2px;
+}
+
+.buttons__link.active {
+  color: #dedede;
+  border-color: #c5c5c5;
 }
 
 .buttons__link:hover {
@@ -401,6 +397,16 @@ h6 {
 
 .portfolio__pic:nth-child(n+13) {
   display: none;
+}
+
+.portfolio__img {
+  transition: all 0.1s ease-in-out;
+}
+
+.portfolio__img.portfolio__img-active {
+  transition: all .2s linear;
+  border: 5px solid #F06C64;
+  border-radius: 5px;
 }
 
 .about {
