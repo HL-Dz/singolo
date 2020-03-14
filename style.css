@@ -696,10 +696,11 @@ input:focus:invalid {
   left: 50%;
   padding: 15px;
   max-width: 320px;
+  max-height: 380px;
   transform: translate(-50%, -50%);
   border: 1px solid #a89c9c;
   border-radius: 2px;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 #message p {
