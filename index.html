@@ -301,6 +301,14 @@
         </div>
       </div>
       <div class="quote" id="contact">
+        <div id="message-block" class="hidden">
+          <div id="message">
+            <h3 id="message__title">Письмо отправлено!</h3>
+            <p>Тема: <span id="result-subject"></span></p>
+            <p>Описание: <span id="result-detail"></span></p>
+            <button id="close-btn">Ок</button>
+          </div>
+        </div>
         <div class="container">
           <div class="quote__block">
             <h2 class="quote__title">Get a Quote</h2>
@@ -319,8 +327,8 @@
                     type="text"
                     name="name"
                     placeholder="Name (Required)"
-                    required
                     pattern="[_a-zA-Z0-9()\s-]+"
+                    required
                   />
                 </div>
                 <div class="form__row">
@@ -330,8 +338,8 @@
                     type="email"
                     name="email"
                     placeholder="Email (Required)"
-                    required
                     pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+                    required
                   />
                 </div>
                 <div class="form__row">
@@ -341,8 +349,8 @@
                     type="text"
                     name="subject"
                     placeholder="Subject"
-                    required
                     pattern="[_a-zA-Z0-9()\s-]+"
+                    required
                   />
                 </div>
                 <div class="form__row">
@@ -355,7 +363,7 @@
                   ></textarea>
                 </div>
                 <div class="form__row form__row--btn">
-                  <input class="form__submit" type="submit" value="Submit" />
+                  <input class="form__submit" id="form-submit" type="submit" value="Submit" />
                 </div>
               </form>
               <div class="info">
