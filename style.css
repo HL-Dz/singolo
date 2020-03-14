@@ -400,10 +400,12 @@ h6 {
 }
 
 .portfolio__img {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio__img.portfolio__img-active {
+  max-width: 100%;
+  max-height: auto;
   transition: all .2s linear;
   border: 5px solid #F06C64;
   border-radius: 5px;
