@@ -75,10 +75,10 @@ const hidePopup = () => {
     messageBlock.classList.remove('popup-show');
     messageBlock.classList.add('popup-hide');
     messageBlock.classList.add('hidden');
-    document.querySelector('#form-name').value = '';
-    document.querySelector('#form-email').value = '';
-    document.querySelector('#form-subject').value = '';
-    document.querySelector('#form-detail').value = '';
+    name.value = '';
+    email.value = '';
+    subject.value = '';
+    describe.value = '';
   }, 500);
 }
 
