@@ -8,6 +8,8 @@ const subject = document.getElementById('form-subject');
 const describe = document.getElementById('form-detail');
 const formSubmit = document.getElementById('form-submit');
 const closeBtn = document.getElementById('close-btn');
+const verticalBtn = document.querySelector('.vertical-circle');
+const horizontalBtn = document.querySelector('.horizontal-circle');
 
 // Switch menu
 NAV.addEventListener('click', (e)=> {
@@ -84,3 +86,27 @@ const hidePopup = () => {
 
 closeBtn.addEventListener('click', hidePopup);
 formSubmit.addEventListener('click', showSentMessage);
+
+
+// Screen activation
+const showBlackoutVertical = () => {
+  let toBottom = document.querySelector('.to-bottom');
+  let toTop = document.querySelector('.to-top');
+  toBottom.classList.toggle('to-bottom-active');
+  toTop.classList.toggle('to-top-active');
+  verticalBtn.classList.toggle('vertical-circle-active');
+  return;
+}
+
+const showBlackoutHorizontal = () => {
+  let toLeft = document.querySelector('.to-left');
+  let toRight = document.querySelector('.to-right');
+  toLeft.classList.toggle('to-left-active');
+  toRight.classList.toggle('to-right-active');
+  horizontalBtn.classList.toggle('horizontal-circle-active');
+  return;
+}
+
+
+verticalBtn.addEventListener('click', showBlackoutVertical);
+horizontalBtn.addEventListener('click', showBlackoutHorizontal);
