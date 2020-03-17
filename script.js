@@ -128,15 +128,13 @@ const activeSlide = (s) => {
   if(s > allSlides.length){currentSlide = 1};
   if(s < 1) {currentSlide = allSlides.length};
   if(currentSlide == 2) {
-    slider.style.background = '#648BF0';
-    slider.style.borderBottomColor = '#648BF0';
-    arrowLeft.style.opacity = '0.5';
-    arrowRight.style.opacity = '0.5';
+    slider.classList.add('slider-active');
+    arrowLeft.classList.add('arrow-left-active');
+    arrowRight.classList.add('arrow-right-active');
   } else {
-    slider.style.background = '';
-    slider.style.borderBottomColor = '';
-    arrowLeft.style.opacity = '';
-    arrowRight.style.opacity = '';
+    slider.classList.remove('slider-active');
+    arrowLeft.classList.remove('arrow-left-active');
+    arrowRight.classList.remove('arrow-right-active');
   }
 
   for(let i = 0; i < allSlides.length; i++) {
@@ -147,3 +145,10 @@ const activeSlide = (s) => {
 };
 
 activeSlide(currentSlide);
+arrowLeft.addEventListener('click', () => {
+  switchSlide(-1)
+});
+
+arrowRight.addEventListener('click', () => {
+  switchSlide(1)
+});
