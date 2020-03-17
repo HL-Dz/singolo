@@ -39,32 +39,39 @@
         <div class="container">
           <div class="slider__block">
             <div class="arrow-left">
-              <img src="./assets/images/arrow-left.png" alt="arrow-left">
+              <img src="./assets/images/arrow-left.png" onclick="switchSlide(-1)" alt="arrow-left">
             </div>
-            <div class="arrow-right">
-              <img src="./assets/images/arrow-right.png" alt="arrow-right">
+            <div class="arrow-right"">
+              <img src="./assets/images/arrow-right.png" onclick="switchSlide(1)" alt="arrow-right">
             </div>
-            <div class="slide">
-              <div class="vertical-phone" id="vertical-phone">
-                <div class="vertical-blackout">
-                  <div class="to-bottom"></div>
-                  <div class="to-top"></div>
+            <div class="slider__wrapper">
+              <div class="slide">
+                <div class="vertical-phone" id="vertical-phone">
+                  <div class="vertical-blackout">
+                    <div class="to-bottom"></div>
+                    <div class="to-top"></div>
+                  </div>
+                  <div class="vertical-circle"></div>
+                  <img class="vertical-img" src="./assets/images/iphone-vertical.png" alt="iphone-vertical">
+                  <div class="vertical-shadow">
+                    <img src="./assets/images/vertical-shadow.png" alt="vertical-shadow">
+                  </div>
                 </div>
-                <div class="vertical-circle"></div>
-                <img class="vertical-img" src="./assets/images/iphone-vertical.png" alt="iphone-vertical">
-                <div class="vertical-shadow">
-                  <img src="./assets/images/vertical-shadow.png" alt="vertical-shadow">
+                <div class="hozirontal-phone">
+                  <div class="horizontal-blackout">
+                    <div class="to-left"></div>
+                    <div class="to-right"></div>
+                  </div>
+                  <div class="horizontal-circle"></div>
+                  <img class="horizontal-img" src="./assets/images/iphone-horizontal.png" alt="iphone-vertical">
+                  <div class="horizontal-shadow">
+                    <img src="./assets/images/horizontal-shadow.png" alt="horizontal-shadow">
+                  </div>
                 </div>
               </div>
-              <div class="hozirontal-phone">
-                <div class="horizontal-blackout">
-                  <div class="to-left"></div>
-                  <div class="to-right"></div>
-                </div>
-                <div class="horizontal-circle"></div>
-                <img class="horizontal-img" src="./assets/images/iphone-horizontal.png" alt="iphone-vertical">
-                <div class="horizontal-shadow">
-                  <img src="./assets/images/horizontal-shadow.png" alt="horizontal-shadow">
+              <div class="slide">
+                <div class="allPhones">
+                  <img src="assets/images/slide2.png" alt="Phones">
                 </div>
               </div>
             </div>

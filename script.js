@@ -1,3 +1,4 @@
+// Constants
 const NAV = document.querySelector('.header__nav');
 const portfolioBtns = document.querySelector('ul.buttons');
 const portfolioBlock = document.querySelector('.portfolio__images');
@@ -10,6 +11,8 @@ const formSubmit = document.getElementById('form-submit');
 const closeBtn = document.getElementById('close-btn');
 const verticalBtn = document.querySelector('.vertical-circle');
 const horizontalBtn = document.querySelector('.horizontal-circle');
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
 
 // Switch menu
 NAV.addEventListener('click', (e)=> {
@@ -110,3 +113,37 @@ const showBlackoutHorizontal = () => {
 
 verticalBtn.addEventListener('click', showBlackoutVertical);
 horizontalBtn.addEventListener('click', showBlackoutHorizontal);
+
+
+// Slide switch
+let currentSlide = 1;
+
+const switchSlide = (s)=> {
+  activeSlide(currentSlide += s);
+}
+
+const activeSlide = (s) => {
+  let slider = document.querySelector('.slider');
+  let allSlides = document.querySelectorAll('.slide');
+  if(s > allSlides.length){currentSlide = 1};
+  if(s < 1) {currentSlide = allSlides.length};
+  if(currentSlide == 2) {
+    slider.style.background = '#648BF0';
+    slider.style.borderBottomColor = '#648BF0';
+    arrowLeft.style.opacity = '0.5';
+    arrowRight.style.opacity = '0.5';
+  } else {
+    slider.style.background = '';
+    slider.style.borderBottomColor = '';
+    arrowLeft.style.opacity = '';
+    arrowRight.style.opacity = '';
+  }
+
+  for(let i = 0; i < allSlides.length; i++) {
+    allSlides[i].style.display = 'none';
+  }
+
+  allSlides[currentSlide - 1].style.display = 'flex';
+};
+
+activeSlide(currentSlide);
