@@ -855,11 +855,10 @@ input:focus:invalid {
   margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: rgb(135, 233, 135);
 }
 
 #message span {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   max-width: 290px;
 }
 
@@ -889,6 +888,7 @@ input:focus:invalid {
 #result-detail {
   color: #ffffff;
 }
+
 
 .info {
   text-align: justify;

@@ -53,19 +53,19 @@ portfolioBlock.addEventListener('click', (e)=> {
 const showSentMessage = (e) => {
   if(name.value !== '' && email.value !== '') {
     e.preventDefault();
-    let subject = document.querySelector('#form-subject').value.toString();
-    let describe = document.querySelector('#form-detail').value.toString();
+    let subject = document.querySelector('#form-subject').value;
+    let describe = document.querySelector('#form-detail').value;
     setTimeout(() => {
       if(subject !== '') {
-        document.getElementById('result-subject').innerText = subject;
+        document.getElementById('result-subject').innerText = 'Subject: ' + subject;
       } else {
-        document.getElementById('result-subject').innerText = 'Без темы'
+        document.getElementById('result-subject').innerText = 'Without subject'
       }
     
       if(describe !== '') {
-        document.getElementById('result-detail').innerText = describe;
+        document.getElementById('result-detail').innerText = 'Description: ' + describe;
       } else {
-        document.getElementById('result-detail').innerText = 'Без описания';
+        document.getElementById('result-detail').innerText = 'Without description';
       }
       messageBlock.classList.remove('popup-hide');
       messageBlock.classList.remove('hidden');
