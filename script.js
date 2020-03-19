@@ -80,10 +80,7 @@ const hidePopup = () => {
     messageBlock.classList.remove('popup-show');
     messageBlock.classList.add('popup-hide');
     messageBlock.classList.add('hidden');
-    name.value = '';
-    email.value = '';
-    subject.value = '';
-    describe.value = '';
+    document.querySelector('.form').reset();
   }, 500);
 }
 
