@@ -810,7 +810,7 @@ input:focus:invalid {
   width: 100vw;
   height: 100vh;
   background: rgba(45, 48, 58, 0.9);
-  z-index: 3;
+  z-index: 5;
   color: #ffffff;
 }
 
