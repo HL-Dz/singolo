@@ -15,12 +15,24 @@ const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 
 // Switch menu
-NAV.addEventListener('click', (e)=> {
-  document.querySelectorAll('a').forEach((elem)=> {
-    elem.classList.remove('active');
+const onScroll = () => {
+  let currentPos = window.scrollY;
+  let elems = document.querySelectorAll('.content>div');
+  let links = document.querySelectorAll('.nav__link');
+
+  elems.forEach(el=> {
+    if(el.offsetTop - 160 < currentPos) {
+      links.forEach(link=> {
+        link.classList.remove('active');
+        if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
+          link.classList.add('active');
+        }
+      })
+    }
   })
-  e.target.classList.add('active');
-});
+}
+
+document.addEventListener('scroll', onScroll);
 
 
 // Switch tabs
