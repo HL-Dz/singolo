@@ -11,8 +11,12 @@ const formSubmit = document.getElementById('form-submit');
 const closeBtn = document.getElementById('close-btn');
 const verticalBtn = document.querySelector('.vertical-circle');
 const horizontalBtn = document.querySelector('.horizontal-circle');
+const slider = document.querySelector('.slider');
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
+const slides = document.querySelectorAll('.slide');
+const slideParent = document.querySelector('.slider__wrapper');
+
 
 // Switch menu
 const onScroll = () => {
@@ -124,40 +128,53 @@ verticalBtn.addEventListener('click', showBlackoutVertical);
 horizontalBtn.addEventListener('click', showBlackoutHorizontal);
 
 
-// Slide switch
-let currentSlide = 1;
+// Slider
+let slideDirection = 'prev' || 'next';
 
-const switchSlide = (s)=> {
-  activeSlide(currentSlide += s);
+const previousSlide = ()=> {
+  if(slideDirection == 'prev') {
+    slideParent.prepend(slideParent.lastElementChild);
+    slides.forEach(el=> {
+      el.style.transition = 'none';
+      el.style.left = '-100%';
+    })
+    setTimeout(() => {
+      slides.forEach(el=> {
+        el.style.transition = '0.5s';
+        el.style.left = '0';
+      })
+    }, 50);
+  } else {
+    slides.forEach(el=> {
+      el.style.left = '0';
+    })
+  }
+  slider.classList.toggle('slider-active');
+  slideDirection = 'prev';
 }
 
-const activeSlide = (s) => {
-  let slider = document.querySelector('.slider');
-  let allSlides = document.querySelectorAll('.slide');
-  if(s > allSlides.length){currentSlide = 1};
-  if(s < 1) {currentSlide = allSlides.length};
-  if(currentSlide == 2) {
-    slider.classList.add('slider-active');
-    arrowLeft.classList.add('arrow-left-active');
-    arrowRight.classList.add('arrow-right-active');
+const nextSlide = () => {
+  if(slideDirection == 'next') {
+    slideParent.append(slideParent.firstElementChild);
+    slides.forEach(el=> {
+      el.style.transition = 'none';
+      el.style.left = '0';
+    })
+    setTimeout(() => {
+      slides.forEach(el=> {
+        el.style.left = '-100%';
+        el.style.transition = '0.5s';
+      })
+    }, 50);
   } else {
-    slider.classList.remove('slider-active');
-    arrowLeft.classList.remove('arrow-left-active');
-    arrowRight.classList.remove('arrow-right-active');
+    slides.forEach(el=> {
+      el.style.left = '-100%';
+    })
   }
+  slider.classList.toggle('slider-active');
+  slideDirection = 'next';
+}
 
-  for(let i = 0; i < allSlides.length; i++) {
-    allSlides[i].style.display = 'none';
-  }
 
-  allSlides[currentSlide - 1].style.display = 'flex';
-};
-
-activeSlide(currentSlide);
-arrowLeft.addEventListener('click', () => {
-  switchSlide(-1)
-});
-
-arrowRight.addEventListener('click', () => {
-  switchSlide(1)
-});
+arrowRight.addEventListener('click', nextSlide);
+arrowLeft.addEventListener('click', previousSlide);
