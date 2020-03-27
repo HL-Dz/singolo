@@ -178,3 +178,21 @@ const nextSlide = () => {
 
 arrowRight.addEventListener('click', nextSlide);
 arrowLeft.addEventListener('click', previousSlide);
+
+
+// BURGER MENU
+const burgerMenu = document.querySelector('.burger');
+const showBurgerMenu = () => {
+  NAV.classList.add('header__nav-active');
+  burgerMenu.classList.add('burger-active');
+}
+
+const hideBurgerMenu = (e) => {
+  if(e.target.tagName === 'A') {
+    NAV.classList.remove('header__nav-active');
+    burgerMenu.classList.remove('burger-active');
+  }
+}
+
+NAV.addEventListener('click', hideBurgerMenu);
+burgerMenu.addEventListener('click', showBurgerMenu);
