@@ -1042,6 +1042,10 @@ input:focus:invalid {
 
   /* SLIDER */
 
+  .slider {
+    border-bottom-width: 4px;
+  }
+
   .slider__block {
     min-height: 100%;
   }
@@ -1050,7 +1054,20 @@ input:focus:invalid {
     margin-left: 0;
   }
 
+  .slider__wrapper {
+    max-width: 599px;
+    width: 100%;
+    padding: 32px 0 51px 0;
+    min-height: auto;
+  }
 
+  .arrow-left {
+    left: -2%;
+  }
+
+  .arrow-right {
+    right: -2%;
+  }
 
   .vertical-phone {
     margin-right: 73px;
@@ -1139,6 +1156,10 @@ input:focus:invalid {
   }
 
   /* PORTFOLIO */
+  .portfolio {
+    border-bottom: 7.6px solid #323746;
+  }
+  
   .portfolio__pic {
     width: calc((100% - 40px) / 3);
   }
@@ -1148,6 +1169,10 @@ input:focus:invalid {
   }
 
   /* ABOUS_US */
+  .about__desc {
+    text-align: left;
+  }
+
   .person__img {
     max-width: 100%;
     height: auto;
@@ -1166,13 +1191,27 @@ input:focus:invalid {
   }
 
   /* GET A QUOTE */
+  .quote__desc {
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 19px;
+  }
+
   .form {
     margin-right: 29px;
-    flex: 0 0 64.9%;
+    flex: 0 0 65.9%;
+  }
+
+  .info__head {
+    margin-bottom: 3px;
   }
 
   .info__block {
     margin-bottom: 15px;
+  }
+
+  .info__block p {
+    line-height: 22px;
   }
 
   .form__detail {
@@ -1181,7 +1220,11 @@ input:focus:invalid {
   }
 
   .quote {
-    padding-bottom: 45px;
+    padding: 53px 0 37px;
+  }
+
+  .quote__title {
+    line-height: 36px;
   }
 
   .info__pic {
@@ -1191,6 +1234,14 @@ input:focus:invalid {
   .info__pic img{
     width: 100%;
     height: auto;
+  }
+
+  .form__input {
+    margin-bottom: 14px;
+  }
+
+  .form__row--btn {
+    margin-top: 11px;
   }
 }
 
@@ -1251,7 +1302,7 @@ input:focus:invalid {
     content: "";
     display: block;
     background: red;
-    width: calc(100% + 238px);
+    width: calc(100% + 307px);
     height: 100%;
     background: #2D303A;
     opacity: 0.6;
@@ -1293,7 +1344,7 @@ input:focus:invalid {
 
   /* SLIDER */
   .slider { 
-    border-bottom: 2px solid #ea676b;
+    border-bottom-width: 2px;
   }
 
   .slider__wrapper {
@@ -1322,6 +1373,30 @@ input:focus:invalid {
     margin-right: 35.6px;
   }
 
+  .vertical-circle {
+    bottom: 2.5%;
+    left: 50%;
+    width: 90%;
+    height: 11%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+  }
+
+  .horizontal-circle {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1%;
+    width: 11%;
+    height: 90%;
+    border-radius: 6px;
+  }
+
+  .vertical-circle-active,
+  .horizontal-circle-active
+  {
+    box-shadow: none;
+  }
+
   /* OUR SERVICES */
   .services {
     border-bottom: none;
@@ -1331,9 +1406,15 @@ input:focus:invalid {
     padding-bottom: 29px;
   }
 
+  .services__title {
+    line-height: 36px;
+    margin-bottom: 18px;
+  }
+
   .services__desc {
     text-align: left;
     margin-bottom: 25px;
+    line-height: 30px;
   }
 
   .layout-column3 {
@@ -1343,9 +1424,17 @@ input:focus:invalid {
 
   .service {
     margin-right: 0;
-    margin-bottom: 34px;
+    margin-bottom: 16px;
     width: 100%;
     max-width: 301px;
+  }
+
+  .service__info {
+    margin-left: 20px;
+  }
+
+  .service__text {
+    line-height: 22px;
   }
 
   .service:last-child {
@@ -1376,12 +1465,12 @@ input:focus:invalid {
   }
 
   .portfolio__pic {
-    width: calc((100% - 14px) / 2);
+    width: calc((100% - 10px) / 2);
   }
 
   .portfolio__pic {
-    margin-right: 14px;
-    margin-bottom: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   .portfolio__pic:nth-child(n + 2) {
@@ -1407,7 +1496,7 @@ input:focus:invalid {
   }
 
   .about__desc {
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     text-align: left;
     line-height: 30px;
   }
@@ -1418,7 +1507,6 @@ input:focus:invalid {
   }
 
   .person {
-    /* max-width: 315px; */
     margin-bottom: 34px;
     width: 100%;
   }
@@ -1427,6 +1515,7 @@ input:focus:invalid {
   .quote {
     border-bottom: none;
     padding-bottom: 39px;
+    padding-top: 44px;
   }
 
   .quote__title {
@@ -1478,5 +1567,11 @@ input:focus:invalid {
   
   .footer__copyright {
     display: none;
+  }
+}
+
+@media screen and (max-height: 374px) and (orientation: landscape) {
+  .nav {
+    padding-top: 57px;
   }
 }
