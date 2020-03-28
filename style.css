@@ -1459,12 +1459,12 @@ input:focus:invalid {
   }
 
   .portfolio__pic {
-    width: calc((100% - 10px) / 2);
+    width: calc((100% - 14px) / 2);
   }
 
   .portfolio__pic {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 14px;
+    margin-bottom: 14px;
   }
 
   .portfolio__pic:nth-child(n + 2) {
