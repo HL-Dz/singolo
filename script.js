@@ -182,15 +182,18 @@ arrowLeft.addEventListener('click', previousSlide);
 
 // BURGER MENU
 const burgerMenu = document.querySelector('.burger');
+
 const showBurgerMenu = () => {
-  NAV.classList.add('header__nav-active');
-  burgerMenu.classList.add('burger-active');
+  NAV.classList.toggle('header__nav-active');
+  burgerMenu.classList.toggle('burger-active');
+  document.querySelector('.header__logo').classList.toggle('header__logo-active');
 }
 
 const hideBurgerMenu = (e) => {
   if(e.target.tagName === 'A') {
     NAV.classList.remove('header__nav-active');
     burgerMenu.classList.remove('burger-active');
+    document.querySelector('.header__logo').classList.remove('header__logo-active');
   }
 }
 
