@@ -1,6 +1,9 @@
 # RS School 2020Q1
+
 ## Task "Singolo"
 [Singolo. Final deploy](https://hl-dz.github.io/singolo/ "Final deploy")
+
+I did this task "Singolo" while studying at RS School. There is little JavaScript in this task, because there was an emphasis on layout.
 
 Screenshot:
 ![image](https://user-images.githubusercontent.com/33293124/214359512-5ab11b01-6138-4746-b6dd-29dd3a3db375.png)
